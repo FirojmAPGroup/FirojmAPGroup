@@ -10,6 +10,7 @@ class PagesController extends Controller
     use \App\Traits\TraitController;
     public function aboutUsForm(){
         $pageContent = Pages::where('title','aboutus')->firstOrNew();
+
         if(isPost()){
             $validator = Validator::make(request()->all(),[
                 'aboutus'=>'required',

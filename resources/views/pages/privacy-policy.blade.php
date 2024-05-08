@@ -21,12 +21,15 @@
                             <span class="text-danger">*</span>
                         </label>
                         <div class="col-md-10">
-                            <textarea name="aboutus" id="aboutus" class="summernote">{!! $page->content !!}</textarea>
+                            <textarea name="aboutus" id="aboutus" class="summernote">{!!  ucfirst($page->content) !!}</textarea>
                         </div>
                     </div>
                     <div class="form-group row">
+                        <div class="">
+                            <a href="{{ route('app.dashboard') }}" style="color: blue" class="btn trust-wave-button-color bg-success">Back</a>
+                        </div>
                         <div class="col-lg-8 ml-auto text-right">
-                            <button type="submit" class="btn trust-wave-button-color">Submit</button>
+                            <button type="submit" class="btn trust-wave-button-color">Update</button>
                         </div>
                     </div>
                 </form>
@@ -58,4 +61,33 @@
             };
 
     </script>
+   <script>
+    // Function to capitalize the first letter of a string
+    function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
+    // Function to capitalize the first letter of the textarea before form submission
+    function capitalizeTextarea() {
+        // Get the textarea element by its ID
+        var aboutusTextarea = document.getElementById('aboutus');
+
+        // Log the current value of the textarea
+        console.log('Before capitalization:', aboutusTextarea.value);
+
+        // Capitalize the first letter of the textarea value
+        aboutusTextarea.value = capitalizeFirstLetter(aboutusTextarea.value);
+
+        // Log the updated value of the textarea
+        console.log('After capitalization:', aboutusTextarea.value);
+    }
+
+    // Attach an event listener to the form submission event
+    document.getElementById('frmSubAdmin').addEventListener('submit', function(event) {
+        // Call the function to capitalize the textarea before form submission
+        capitalizeTextarea();
+    });
+</script>
+
+    
 @endpush

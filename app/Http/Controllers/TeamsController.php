@@ -177,5 +177,10 @@ class TeamsController extends Controller
         }
     }
 
-
+    public function TeamReport(){
+        return view('TeamReport.TeamView',[
+            'title'=>'Teams|Report',
+            'urlListData'=>routePut('teams.report'),'table' => 'tableTeams'
+        ]);
+    }
 }

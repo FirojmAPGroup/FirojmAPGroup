@@ -14,7 +14,7 @@
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Team</a>
                         <ul aria-expanded="false">
                             <li><a href="{{ routePut('teams.list') }}">Team List</a></li>
-                            <li><a href="javascript:void()">Team Report</a></li>
+                            <li><a href="{{ routePut('teams.view') }}">Team Report</a></li>
                         </ul>
                     </li>
                 </ul>

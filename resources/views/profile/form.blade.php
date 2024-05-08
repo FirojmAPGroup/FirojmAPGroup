@@ -32,7 +32,7 @@
             </div>
             <div class="card-body">
                 <div class="form-validation">
-                    <form id="frmSubAdmin" class="form-valide cls-crud-simple-save" action="{{ route('profile.save') }}" method="post">
+                    <form id="frmadmin" class="form-valide cls-crud-simple-save" action="{{ route('profile.save') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                             <div class="col-xl-6">
@@ -62,7 +62,7 @@
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-lg-8 ml-auto">
-                                        <button type="submit" class="btn trust-wave-button-color" > <a href="{{ routePut('app.dashboard') }}">Back </a></button>
+                                        <a href="{{ route('app.dashboard') }}" class="btn btn-secondary">Back</a>
                                     </div>
                                 </div>
                             </div>
@@ -105,6 +105,7 @@
                                     <div class="col-lg-8 ml-auto">
                                         <button type="submit" class="btn trust-wave-button-color">Update</button>
                                     </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -134,4 +135,25 @@
         }
     });
 </script>
+<script>
+    // Function to capitalize the first letter of a string
+    function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+    // Function to capitalize the first letter of the input field before form submission
+    function capitalizeInputFields() {
+        // Get the input fields by their IDs
+        var firstNameInput = document.getElementById('first_name');
+        var lastNameInput = document.getElementById('last_name');
+        // Capitalize the first letter of the input fields
+        firstNameInput.value = capitalizeFirstLetter(firstNameInput.value);
+        lastNameInput.value = capitalizeFirstLetter(lastNameInput.value);
+    }
+
+    // Attach an event listener to the form submission event
+    document.getElementById('frmadmin').addEventListener('submit', function(event) {
+        capitalizeInputFields();
+    });
+</script>
+
 @endpush

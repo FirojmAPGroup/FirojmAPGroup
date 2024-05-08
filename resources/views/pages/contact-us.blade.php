@@ -40,8 +40,11 @@
                         </div>
                     </div>
                     <div class="form-group row">
+                        <div class="">
+                            <a href="{{ route('app.dashboard') }}" style="color: blue" class="btn trust-wave-button-color bg-success">Back</a>
+                        </div>
                         <div class="col-lg-8 ml-auto text-right">
-                            <button type="submit" class="btn trust-wave-button-color">Submit</button>
+                            <button type="submit" class="btn trust-wave-button-color">Update</button>
                         </div>
                     </div>
                 </form>

@@ -6,12 +6,12 @@
 <div class="row page-titles trust-wave mx-0">
     <div class="col-sm-6 p-md-0">
         <div class="welcome-text ">
-            <h4>Profile</h4>
+            <h4>Team Report</h4>
         </div>
     </div>
-    <div class="col-sm-6 p-md-0 d-flex justify-content-end">
-        <a href="{{ routePut('profile') }}" class="btn trust-wave-button-color btn-rounded btn-warning"><span class="mr-2"><i class="fa fa-user-plus"></i></span>Profile</a>
-    </div>
+    {{-- <div class="col-sm-6 p-md-0 d-flex justify-content-end">
+        <a href="{{ routePut('team.report') }}" class="btn trust-wave-button-color btn-rounded btn-warning"><span class="mr-2"><i class="fa fa-user-plus"></i></span>View Team Report</a>
+    </div> --}}
 </div>
 <div class="row">
     <div class="col-12">
@@ -25,7 +25,6 @@
                                 <th data-data="last_name">Last Name</th>
                                 <th data-data="email">Email</th>
                                 <th data-data="ti_status">Status</th>
-                                <th data-data="password">password</th>
                                 <th data-data="created_at">Created at</th>
                                 <th data-data="actions" data-sortable="false">Action</th>
                             </tr>
